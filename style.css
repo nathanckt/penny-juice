@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    flex: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #013833;
+}
+
+.logo{
+    width: 80px;
+}
+
+
+/* CONTACT */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contact-title{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.contact-links{
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    margin-top: 60px;
+}
+
+.contact-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-link:hover{
+    color: #f38420;
+}
+
+
+/* COMMANDE */
+
+.command{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.command-title{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.command-subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+}
