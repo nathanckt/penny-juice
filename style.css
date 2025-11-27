@@ -1,6 +1,104 @@
 body {
   margin: 0;
   padding: 0;
+
+/* Infos page styles */
+.infos-page{
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+.infos-top{
+    margin-bottom: 18px;
+}
+.back-btn{
+    display: inline-block;
+    background: #efefef;
+    color: #222;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.infos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.infos-personal h2, .infos-delivery h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.form-row{margin-bottom:12px}
+.form-row.two-cols{display:flex;gap:20px}
+.form-row.three-cols{display:flex;gap:12px}
+.form-row label{display:flex;flex-direction:column;font-size:14px;color:#333}
+.form-row input{margin-top:8px;padding:10px;border:1px solid #e6e6e6;border-radius:8px;font-size:14px}
+
+.infos-delivery{border-left:1px solid #e6e6e6;padding-left:36px}
+
+/* total button style */
+.total-btn{
+    display:inline-block;
+    background:#111;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* form validation styles */
+.input-error{border-color:#c94444 !important; box-shadow:0 0 0 3px rgba(201,68,68,0.06);}
+.form-error{background:#fff0f0;border:1px solid #f2c6c6;padding:10px;border-radius:6px;color:#a00}
+
+@media (max-width: 880px){
+    .infos-grid{grid-template-columns:1fr}
+    .infos-delivery{border-left:none;padding-left:0}
+}
+
+/* recap page */
+.recap-page{max-width:1100px;margin:40px auto 120px;padding:0 20px}
+.recap-top{display:flex;align-items:center;gap:20px}
+.recap-top h1{flex:1;text-align:center;margin:0}
+.recap-content{background:#f2f2f2;border-radius:8px;padding:30px;margin-top:20px}
+.recap-box{margin-bottom:20px}
+.recap-box h3{margin:0 0 10px 0}
+.recap-order-list{list-style:disc;padding-left:28px}
+.recap-personal-list,.recap-delivery-list{list-style:disc;padding-left:28px}
+.recap-actions{display:flex;justify-content:flex-end;margin-top:18px}
+.payment-btn{background:#111;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700}
+
+/* payment/confirmation page */
+.payment-page{
+    max-width:900px;
+    margin:48px auto 120px;
+    padding:0 20px;
+}
+.payment-success{
+    text-align:center;
+    background:#fff;
+    padding:28px 26px;
+    border-radius:10px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.06);
+}
+.success-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:72px;height:72px;border-radius:50%;background:#e9f7ef;color:#1a8a3f;font-size:32px;margin:0 auto 14px;font-weight:700;border:2px solid rgba(26,138,63,0.12)
+}
+.payment-success h1{font-size:24px;margin:8px 0}
+.order-summary{margin-top:18px;text-align:left;background:#f6f6f6;padding:14px;border-radius:8px}
+.order-summary h3{margin:0 0 8px 0}
+.payment-order-list{list-style:disc;padding-left:18px;margin:0 0 10px 0}
+.payment-total{font-weight:700;text-align:right}
+
+@media (max-width:600px){
+    .payment-success{padding:18px}
+    .success-icon{width:56px;height:56px;font-size:26px}
+}
   font-family: "Roboto", sans-serif;
 }
 
@@ -206,7 +304,6 @@ body {
     text-align: center;
 }
 
-/* Cart total bar (fixed bottom) */
 .cart-total{
     position: fixed;
     left: 0;
@@ -231,6 +328,21 @@ body {
     color: #222;
 }
 
+.total-btn{
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #013833;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.total-btn:hover{
+    background-color: #02514f;
+}
+
 @media (max-width: 520px){
     .cart-total{
         padding: 10px;
@@ -244,14 +356,13 @@ body {
     }
 }
 
-/* add bottom padding to page content so it doesn't hide under the fixed bar */
 body{
-    padding-bottom: 72px; /* leaves room for the total bar */
+    padding-bottom: 72px; 
 }
 
-/* Info popover */
+
 .info-popover{
-    position: absolute; /* positioned by JS */
+    position: absolute;
     width: 260px;
     background: #ffffff;
     color: #222;
@@ -274,7 +385,6 @@ body{
     pointer-events: auto;
 }
 
-/* Arrow pointing downwards (popover placed above target) */
 .info-popover.arrow-bottom:before{
     content: "";
     position: absolute;
@@ -288,7 +398,6 @@ body{
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* Arrow pointing upwards (popover placed below target) */
 .info-popover.arrow-top:before{
     content: "";
     position: absolute;
@@ -312,7 +421,6 @@ body{
     padding-left: 14px;
 }
 
-/* Mobile: full width under the product info */
 @media (max-width: 520px){
     .info-popover{
         position: static;
@@ -322,7 +430,6 @@ body{
         pointer-events: auto;
         margin-top: 10px;
     }
-    /* On small screens we'll render the popover inline under the product card */
     .info-popover.mobile-inline{
         position: static !important;
         width: 100% !important;
