@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Mettre à jour l'affichage
             quantityDisplay.textContent = currentQuantity;
+            // Mettre à jour le total après modification
+            updateTotals();
         });
     });
     
@@ -219,6 +221,32 @@ document.addEventListener('DOMContentLoaded', function() {
             open.forEach(p => { p.classList.remove('visible'); p.setAttribute('aria-hidden', 'true'); });
         }
     });
+
+    // ---- Cart totals logic ----
+    function formatCurrency(v){
+        return v.toFixed(2);
+    }
+
+    function updateTotals(){
+        const cards = document.querySelectorAll('.product-card');
+        let totalQty = 0;
+        let totalPrice = 0;
+        cards.forEach(card => {
+            const price = parseFloat(card.dataset.price || '0');
+            const qtyEl = card.querySelector('.quantity');
+            const qty = qtyEl ? parseInt(qtyEl.textContent) || 0 : 0;
+            totalQty += qty;
+            totalPrice += price * qty;
+        });
+
+        const qtyNode = document.querySelector('.total-quantity');
+        const priceNode = document.querySelector('.total-price');
+        if (qtyNode) qtyNode.textContent = totalQty;
+        if (priceNode) priceNode.textContent = formatCurrency(totalPrice);
+    }
+
+    // Initialize totals on load
+    updateTotals();
 
     // Close any open popovers when clicking outside
     document.addEventListener('click', function(e){
