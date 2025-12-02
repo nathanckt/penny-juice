@@ -4,10 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penny Juice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>PENNY JUICE</h1>
+    <nav class="navbar">
+        <img src="/assets/img/logo.png" alt="Logo Penny Juice" class="logo">
+    </nav>
+    <section class="contact">
+        <h1 class="contact-title">CONTACTEZ-NOUS</h1>
+        <p class="contact-subtitle">pour commander avec un de nos conseillers (disponible 24/7)</p>
+        <div class="contact-links">
+            <a href="tel:+15633403661" class="contact-link">
+                <img src="/assets/icons/phone.svg" alt="Icône de téléphone" class="contact-icon">
+                <span class="phone-number">(563) 340-3661</span>
+            </a>
+            <a href="mail:pennyjuice@hotmail.com" class="contact-link">
+                <img src="/assets/icons/mail.svg" alt="Icône de mail" class="contact-icon">
+                <span class="phone-number">pennyjuice@hotmail.com</span>
+            </a>
+            <a href="fax:+15633866200" class="contact-link">
+                <img src="/assets/icons/printer.svg" alt="Icône de fax" class="contact-icon">
+                <span class="phone-number">563-386-6200</span>
+            </a>
+        </div>
+    </section>
+    <section class="command">
+        <p class="command-subtitle">ou</p>
+        <h1 class="command-title">COMMANDEZ EN LIGNE</h1>
+        <!-- TODO -->
+        <div class="products-container">
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/3.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Raisin</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/7.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Pomme</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/4.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Bleuet</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/6.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Orange</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/10.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Cerise</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/11.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Citron</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/12.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Fraise</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-price="20">
+                <div class="product-image">
+                    <img src="/assets/img/products/13.png" alt="Image Produit">
+                </div>
+                <div class="product-info">
+                    <div class="product-header">
+                        <h3 class="product-title">Banane</h3>
+                        <button class="info-btn">ⓘ</button>
+                    </div>
+                    <p class="product-price">20$ CAD / 100L par palette</p>
+                    <div class="product-controls">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        <!-- Barre de total fixe -->
+        <div class="cart-total" aria-live="polite">
+            <div class="cart-total-left">Total</div>
+            <div class="cart-total-right"><span class="total-quantity">0</span> articles — <strong class="total-price">0.00</strong> CAD</div>
+            <a href="/pages/infos.html" class="total-btn">Continuer la commande</a>
+        </div>
+    </section>
 </body>
 </html>
